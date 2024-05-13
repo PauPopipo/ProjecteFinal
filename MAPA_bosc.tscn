@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cutvmxpku8pl0"]
+
+[ext_resource type="Texture2D" uid="uid://d4da2hgxb315a" path="res://mapa bosc.PNG" id="1_kjfq4"]
+[ext_resource type="AudioStream" uid="uid://baf16d22f4s70" path="res://01 Ferrari.mp3" id="2_uuyhs"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="MapaBosc" type="Sprite2D" parent="."]
+position = Vector2(577.5, 330.5)
+scale = Vector2(1.00346, 1.01687)
+texture = ExtResource("1_kjfq4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(9, 8)
+polygon = PackedVector2Array(198, 234, 427, 234, 483, 64, 565, 0, 833, 2, 1006, 52, 1125, 185, 1108, 366, 1068, 443, 1073, 557, 1021, 640, 29, 639, 7, 548, 4, 366, 25, 253, 154, 227, 161, 186, 1, 219, -47, 657, 571, 746, 1312, 674, 1289, 318, 1241, 131, 893, -36, 553, -71, 325, 49)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_uuyhs")
+volume_db = -13.748
+autoplay = true

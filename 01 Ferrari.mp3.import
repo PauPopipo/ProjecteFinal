@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://baf16d22f4s70"
+path="res://.godot/imported/01 Ferrari.mp3-7123fb4f5f74b58a56f9614a76cbd0b1.mp3str"
+
+[deps]
+
+source_file="res://01 Ferrari.mp3"
+dest_files=["res://.godot/imported/01 Ferrari.mp3-7123fb4f5f74b58a56f9614a76cbd0b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

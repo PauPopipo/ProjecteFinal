@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://brinb5le7lhx5"]
+
+[ext_resource type="Texture2D" uid="uid://bpy2ogttccuvp" path="res://Mapa desert.png" id="1_xd6bo"]
+[ext_resource type="PackedScene" uid="uid://5l846hgm5x48" path="res://cotxe.tscn" id="2_5tgt6"]
+[ext_resource type="PackedScene" uid="uid://bhhr8x41sg0vr" path="res://Cotxe2.tscn" id="3_xqgnr"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="MapaDesert" type="Sprite2D" parent="."]
+position = Vector2(578, 323)
+texture = ExtResource("1_xd6bo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(521, 4, 1003, 9, 1145, 9, 1147, 640, 0, 646, 2, 29, 105, 7, 485, 9, 16, -81, -171, 231, -103, 509, -17, 703, 1358, 694, 1175, -115)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_5tgt6")]
+position = Vector2(127, 380)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_xqgnr")]
+position = Vector2(128.542, 454.403)

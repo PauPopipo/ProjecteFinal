@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp0ssa8si0p01"]
+
+[ext_resource type="FontFile" uid="uid://c38gdpn1855v3" path="res://Callingstone - Personal Use Only.ttf" id="1_or0tb"]
+[ext_resource type="Script" path="res://Contador.gd" id="2_a7831"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Contador" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 26.0
+offset_right = 145.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("1_or0tb")
+text = "Time : 00,00
+"
+script = ExtResource("2_a7831")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Contador" method="_on_timer_timeout"]

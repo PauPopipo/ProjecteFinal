@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://hm4jgdq74d7e"]
+
+[ext_resource type="VideoStream" path="res://Secuencia-02_1.ogv" id="1_qhyw4"]
+[ext_resource type="PackedScene" uid="uid://cm065hdmxwx3t" path="res://EXIT_TO_MENU.tscn" id="2_mfmwi"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_qhyw4")
+autoplay = true
+
+[node name="Label" parent="." instance=ExtResource("2_mfmwi")]
+offset_left = 1054.0
+offset_top = 25.0
+offset_right = 1118.0
+offset_bottom = 56.0

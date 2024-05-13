@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://byyii35fpvobm"]
+
+[ext_resource type="Texture2D" uid="uid://bpy2ogttccuvp" path="res://Mapa desert.png" id="1_j00pi"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="MapaDesert" type="Sprite2D" parent="."]
+position = Vector2(575, 324)
+texture = ExtResource("1_j00pi")
+
+[node name="MapaDesert2" type="Sprite2D" parent="."]
+position = Vector2(1015, 88)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_j00pi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(356, 48, 495, 203, 881, 199, 1035, 199, 1099, 347, 1128, 549, 1020, 637, 645, 649, 85, 647, 4, 564, 9, 23, 186, 4, 403, 14, 381, -48, -78, -19, -23, 719, 1131, 686, 1271, 406, 1123, 136, 568, 159, 349, 36)

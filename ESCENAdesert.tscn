@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdrk5cpld1o5f"]
+
+[ext_resource type="PackedScene" uid="uid://byyii35fpvobm" path="res://Mapa_desert.tscn" id="1_8q6pc"]
+[ext_resource type="PackedScene" uid="uid://bhhr8x41sg0vr" path="res://Cotxe2.tscn" id="2_wav27"]
+[ext_resource type="PackedScene" uid="uid://5l846hgm5x48" path="res://cotxe.tscn" id="3_70ar0"]
+[ext_resource type="PackedScene" uid="uid://cm065hdmxwx3t" path="res://EXIT_TO_MENU.tscn" id="4_ip4ib"]
+[ext_resource type="PackedScene" uid="uid://cp0ssa8si0p01" path="res://Timer.tscn" id="5_e3wak"]
+
+[node name="StaticBody2D" instance=ExtResource("1_8q6pc")]
+
+[node name="MapaDesert" parent="." index="0"]
+position = Vector2(576, 325)
+
+[node name="CharacterBody2D" parent="." index="3" instance=ExtResource("2_wav27")]
+position = Vector2(142, 480)
+
+[node name="CharacterBody2D2" parent="." index="4" instance=ExtResource("3_70ar0")]
+position = Vector2(102, 422)
+
+[node name="Label" parent="." index="5" instance=ExtResource("4_ip4ib")]
+offset_left = 1062.0
+offset_top = 16.0
+offset_right = 1126.0
+offset_bottom = 47.0
+
+[node name="CanvasLayer" parent="." index="6" instance=ExtResource("5_e3wak")]

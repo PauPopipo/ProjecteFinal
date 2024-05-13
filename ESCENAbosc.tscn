@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://benjfuwj0byag"]
+
+[ext_resource type="PackedScene" uid="uid://cutvmxpku8pl0" path="res://MAPA_bosc.tscn" id="1_hwdyu"]
+[ext_resource type="PackedScene" uid="uid://5l846hgm5x48" path="res://cotxe.tscn" id="2_lub5x"]
+[ext_resource type="PackedScene" uid="uid://bhhr8x41sg0vr" path="res://Cotxe2.tscn" id="3_rb0ym"]
+[ext_resource type="PackedScene" uid="uid://cp0ssa8si0p01" path="res://Timer.tscn" id="4_gipw2"]
+[ext_resource type="PackedScene" uid="uid://cm065hdmxwx3t" path="res://EXIT_TO_MENU.tscn" id="5_smss0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_hwdyu")]
+position = Vector2(-3, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_lub5x")]
+position = Vector2(79, 464)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_rb0ym")]
+position = Vector2(121, 468)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_gipw2")]
+
+[node name="Label" parent="." instance=ExtResource("5_smss0")]
+offset_left = 1092.0
+offset_top = 16.0
+offset_right = 1135.0
+offset_bottom = 39.0

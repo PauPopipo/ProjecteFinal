@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyvhlh4px1ub3"]
+
+[ext_resource type="PackedScene" uid="uid://dmbjc3pvuee83" path="res://mapagel.tscn" id="1_vw3t5"]
+[ext_resource type="PackedScene" uid="uid://cp0ssa8si0p01" path="res://Timer.tscn" id="2_mqix6"]
+
+[node name="CircuitFred" instance=ExtResource("1_vw3t5")]
+
+[node name="CanvasLayer" parent="." index="5" instance=ExtResource("2_mqix6")]

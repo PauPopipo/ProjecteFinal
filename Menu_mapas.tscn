@@ -1,0 +1,116 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdp8i0klmsqyw"]
+
+[ext_resource type="Texture2D" uid="uid://drbb0cl8j6wdu" path="res://automobile-racing-sports-competition.jpg" id="1_y1133"]
+[ext_resource type="Script" path="res://Menumapas.gd" id="2_okm52"]
+[ext_resource type="Texture2D" uid="uid://fc0ey8xsevm2" path="res://Mapa_desert-removebg-preview.png" id="3_ea8pw"]
+[ext_resource type="PackedScene" uid="uid://cm065hdmxwx3t" path="res://EXIT_TO_MENU.tscn" id="4_5k7rf"]
+[ext_resource type="Texture2D" uid="uid://5murw3rq8kwa" path="res://mapa_bosc-removebg-preview.png" id="4_vscyf"]
+[ext_resource type="Texture2D" uid="uid://be05odasrfudm" path="res://circuitprovisional-removebg-preview.png" id="5_r4mkl"]
+[ext_resource type="Texture2D" uid="uid://dylrervryj5pf" path="res://circuit_fred-removebg-preview.png" id="6_xgfdi"]
+[ext_resource type="Texture2D" uid="uid://clb1vcof3jd1c" path="res://noob.PNG" id="8_npas4"]
+[ext_resource type="Texture2D" uid="uid://bdocee85l0w1s" path="res://god.PNG" id="9_7anld"]
+[ext_resource type="Texture2D" uid="uid://dj8mcj24pp7vs" path="res://noob2.PNG" id="10_wir0a"]
+[ext_resource type="Texture2D" uid="uid://bh2a6f5y2a6aw" path="res://Hacker2.PNG" id="11_i4rpb"]
+
+[node name="MenuMapes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Automobile-racing-sports-competition" type="Sprite2D" parent="."]
+position = Vector2(572.5, 325.25)
+scale = Vector2(0.199348, 0.197763)
+texture = ExtResource("1_y1133")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 74.0
+offset_right = 417.0
+offset_bottom = 262.0
+script = ExtResource("2_okm52")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 364.0
+offset_right = 410.0
+offset_bottom = 532.0
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 636.0
+offset_top = 360.0
+offset_right = 1002.0
+offset_bottom = 535.0
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 89.0
+offset_right = 998.0
+offset_bottom = 273.0
+
+[node name="Label" parent="." instance=ExtResource("4_5k7rf")]
+layout_mode = 2
+offset_left = 1017.0
+offset_top = 10.0
+offset_right = 1082.0
+offset_bottom = 41.0
+size_flags_horizontal = 8
+
+[node name="MapaDesert-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(268, 448)
+scale = Vector2(0.515015, 0.492)
+texture = ExtResource("3_ea8pw")
+
+[node name="MapaBosc-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(269, 162)
+scale = Vector2(0.501504, 0.529333)
+texture = ExtResource("4_vscyf")
+
+[node name="Circuitprovisional-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(806, 175)
+scale = Vector2(0.838942, 0.574519)
+texture = ExtResource("5_r4mkl")
+
+[node name="CircuitFred-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(853, 447)
+scale = Vector2(0.507508, 0.473333)
+texture = ExtResource("6_xgfdi")
+
+[node name="Noob" type="Sprite2D" parent="."]
+position = Vector2(827, 51)
+texture = ExtResource("8_npas4")
+
+[node name="God" type="Sprite2D" parent="."]
+position = Vector2(832, 319)
+texture = ExtResource("9_7anld")
+
+[node name="Noob2" type="Sprite2D" parent="."]
+position = Vector2(260, 315)
+texture = ExtResource("10_wir0a")
+
+[node name="Hacker2" type="Sprite2D" parent="."]
+position = Vector2(269, 38)
+texture = ExtResource("11_i4rpb")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="Button" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="Button" method="_on_button_4_pressed"]

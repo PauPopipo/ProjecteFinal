@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmbjc3pvuee83"]
+
+[ext_resource type="Texture2D" uid="uid://d3fiie7yjfudi" path="res://circuit fred.png" id="1_7oqjf"]
+[ext_resource type="PackedScene" uid="uid://bhhr8x41sg0vr" path="res://Cotxe2.tscn" id="2_qafo3"]
+[ext_resource type="PackedScene" uid="uid://5l846hgm5x48" path="res://cotxe.tscn" id="3_ng5ri"]
+[ext_resource type="PackedScene" uid="uid://cm065hdmxwx3t" path="res://EXIT_TO_MENU.tscn" id="4_xh7vl"]
+[ext_resource type="PackedScene" uid="uid://cp0ssa8si0p01" path="res://Timer.tscn" id="5_7fy6w"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.996528, 0.993827)
+polygon = PackedVector2Array(-442.537, -297.839, 465.617, -308.907, 551.916, -180.112, 449.561, 8.04971, 528.836, 160.994, 490.704, 314.944, -567.972, 316.957, -567.972, -303.876, -500.739, -303.876, -507.763, -356.199, -757.631, -367.267, -683.373, 170.05, -529.84, 549.391, 900.125, 400.472, 828.878, -338.087, 152.53, -432.671)
+
+[node name="CircuitFred" type="Sprite2D" parent="."]
+position = Vector2(575, 323)
+scale = Vector2(0.996528, 0.993827)
+texture = ExtResource("1_7oqjf")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_qafo3")]
+position = Vector2(110, 398)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_ng5ri")]
+position = Vector2(74, 400)
+
+[node name="Label" parent="." instance=ExtResource("4_xh7vl")]
+offset_left = 1048.0
+offset_top = 30.0
+offset_right = 1112.0
+offset_bottom = 61.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_7fy6w")]

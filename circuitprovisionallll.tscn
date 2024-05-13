@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm64uyfs0hfua"]
+
+[ext_resource type="Texture2D" uid="uid://dsbbkyia5d5iy" path="res://circuitprovisional.jpg" id="1_f0n0q"]
+[ext_resource type="PackedScene" uid="uid://bhhr8x41sg0vr" path="res://Cotxe2.tscn" id="2_tn84n"]
+[ext_resource type="PackedScene" uid="uid://5l846hgm5x48" path="res://cotxe.tscn" id="3_7meg3"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Circuitprovisional" type="Sprite2D" parent="."]
+position = Vector2(576.5, 322)
+scale = Vector2(2.77644, 1.54808)
+texture = ExtResource("1_f0n0q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(576.5, 322)
+scale = Vector2(2.77644, 1.54808)
+polygon = PackedVector2Array(-198.635, -107.23, -198.275, 36.8199, -187.83, 158.907, 135.965, 178.286, 201.157, 57.4907, 205.839, -112.398, 121.919, -178.286, -3.42165, -153.739, -197.555, -132.422, -200.797, -162.783, 135.245, -199.602, 276.073, -137.59, 299.844, 14.2112, 272.471, 142.112, 142.448, 239.006, -213.763, 227.379, -238.615, 31.6522, -226.369, -55.5528, -202.958, -107.23)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_tn84n")]
+position = Vector2(162, 402)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_7meg3")]
+position = Vector2(221, 412)

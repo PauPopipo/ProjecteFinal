@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://ucfndox85c04"]
+
+[ext_resource type="Texture2D" uid="uid://dsbbkyia5d5iy" path="res://circuitprovisional.jpg" id="1_0htab"]
+[ext_resource type="AudioStream" uid="uid://baf16d22f4s70" path="res://01 Ferrari.mp3" id="2_tlmjt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okh7t"]
+size = Vector2(1147, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfe0g"]
+size = Vector2(75, 646.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnw8g"]
+size = Vector2(1157, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l77un"]
+size = Vector2(93, 710)
+
+[node name="Mapa" type="StaticBody2D"]
+
+[node name="Circuitprovisional" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 323.5)
+scale = Vector2(2.76442, 1.55529)
+texture = ExtResource("1_0htab")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(583, 667)
+shape = SubResource("RectangleShape2D_okh7t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-28, 324)
+shape = SubResource("RectangleShape2D_kfe0g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(576, -33)
+shape = SubResource("RectangleShape2D_xnw8g")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1179, 278)
+shape = SubResource("RectangleShape2D_l77un")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-28, 324)
+build_mode = 1
+polygon = PackedVector2Array(999, -154, 1028, -133, 1049, -111, 1069, -86, 1079, -67, 1081, -39, 1081, 50, 1081, 96, 1061, 126, 1025, 157, 986, 174, 964, 183, 915, 192, 556, 194, 311, 195, 240, 182, 188, 160, 143, 125, 132, 101, 124, 83, 125, -1, 126, -35, 134, -55, 177, -97, 196, -106, 227, -121, 282, -133, 350, -134, 385, -133, 420, -127, 453, -116, 475, -105, 496, -92, 532, -92, 549, -98, 560, -115, 602, -146, 655, -172, 740, -191, 823, -195, 889, -187, 939, -176, 987, -158, 991, -168, 952, -182, 901, -206, 783, -209, 728, -210, 691, -198, 645, -182, 590, -167, 562, -127, 520, -112, 495, -111, 483, -123, 445, -139, 355, -150, 293, -150, 235, -148, 194, -123, 105, -92, 104, -46, 103, 47, 110, 77, 106, 108, 131, 147, 156, 162, 187, 178, 235, 202, 348, 216, 470, 223, 619, 207, 682, 214, 835, 210, 932, 203, 998, 206, 1028, 178, 1103, 126, 1103, -6, 1103, -67, 1091, -120, 1070, -127, 1061, -136, 1028, -153)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_tlmjt")
+volume_db = -10.0
+autoplay = true

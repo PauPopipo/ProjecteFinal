@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://nvkwdijsoqnt"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_fs30i"]
+[ext_resource type="Texture2D" uid="uid://dm6ls7ar8yq0u" path="res://Koenigsegg_Jesko_White_background_White_565189_1280x640.jpg" id="2_pa2vj"]
+[ext_resource type="Texture2D" uid="uid://bjwb5oewhca0p" path="res://360_F_594319926_64LVPyvtlGyxM83kB5RFLwIuLMG06eKt.jpg" id="3_qxsdr"]
+[ext_resource type="PackedScene" uid="uid://cm065hdmxwx3t" path="res://EXIT_TO_MENU.tscn" id="4_ykx6g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc2u7"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_fs30i")
+
+[node name="KoenigseggJeskoWhiteBackgroundWhite5651891280x640" type="Sprite2D" parent="."]
+position = Vector2(574, 326.5)
+scale = Vector2(0.9, 1.00781)
+texture = ExtResource("2_pa2vj")
+
+[node name="360F59431992664lvPyvtlGyxM83kB5rfLwIuLmg06eKt" type="Sprite2D" parent="."]
+position = Vector2(541, 550)
+scale = Vector2(0.198028, 0.188889)
+texture = ExtResource("3_qxsdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fc2u7")
+
+[node name="soundon" type="Button" parent="."]
+offset_left = 438.0
+offset_top = 500.0
+offset_right = 540.0
+offset_bottom = 598.0
+
+[node name="soundoff" type="Button" parent="."]
+offset_left = 553.0
+offset_top = 499.0
+offset_right = 652.0
+offset_bottom = 596.0
+
+[node name="Label" parent="." instance=ExtResource("4_ykx6g")]
+offset_left = 1046.0
+offset_top = 30.0
+offset_right = 1110.0
+offset_bottom = 61.0
+
+[connection signal="pressed" from="soundon" to="." method="_on_soundon_pressed"]
+[connection signal="pressed" from="soundoff" to="." method="_on_soundoff_pressed"]
