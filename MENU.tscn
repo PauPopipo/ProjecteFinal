@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://qrpgdibrqmvn"]
+[gd_scene load_steps=4 format=3 uid="uid://qrpgdibrqmvn"]
 
 [ext_resource type="Script" path="res://MENU.gd" id="1_37nmf"]
-[ext_resource type="VideoStream" path="res://Porsche-GT3-RS-_992_-Unreal-Engine-5-CINEMATIC-_1080p_.ogv" id="1_b7cke"]
+[ext_resource type="VideoStream" path="res://202405071030 (1).ogv" id="2_3344x"]
+[ext_resource type="PackedScene" uid="uid://b51h867rqtrsa" path="res://EXITGAME.tscn" id="3_18xcu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,12 +23,13 @@ anchor_left = -0.521
 anchor_top = -0.421
 anchor_right = -0.521
 anchor_bottom = -0.421
-offset_left = -233.808
-offset_top = -162.192
-offset_right = 1686.19
-offset_bottom = 925.808
+offset_left = -239.808
+offset_top = -233.192
+offset_right = 3600.19
+offset_bottom = 1926.81
+scale = Vector2(0.3, 0.3)
 pivot_offset = Vector2(547, 431)
-stream = ExtResource("1_b7cke")
+stream = ExtResource("2_3344x")
 volume_db = -14.86
 autoplay = true
 
@@ -52,6 +54,13 @@ text = "CREDITS"
 [node name="OPTIONS" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "OPTIONS"
+
+[node name="Control" parent="." instance=ExtResource("3_18xcu")]
+layout_mode = 1
+offset_left = 632.0
+offset_top = -186.0
+offset_right = 632.0
+offset_bottom = -186.0
 
 [connection signal="pressed" from="VBoxContainer/START" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/CREDITS" to="." method="_on_credits_pressed"]
